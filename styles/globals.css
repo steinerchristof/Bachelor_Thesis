@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* — Minimalistic Base Styles -------------------------------------------- */
+:root {
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 
+                'Helvetica Neue', Arial, sans-serif;
+  --color-primary: #0F172A;
+  --color-secondary: #64748B;
+  --color-accent: #3B82F6;
+  --color-bg: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-border: #E2E8F0;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+.dark {
+  --color-primary: #F8FAFC;
+  --color-secondary: #94A3B8;
+  --color-accent: #60A5FA;
+  --color-bg: #0F172A;
+  --color-surface: #1E293B;
+  --color-border: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+/* Typography Scale */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+h1 { font-size: 1.875rem; font-weight: 600; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.125rem; }
+
+p {
+  line-height: 1.625;
+  color: var(--color-secondary);
+}
+
+strong, b {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Forms & Inputs */
+::placeholder {
+  color: var(--color-secondary);
+  opacity: 0.6;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: var(--color-primary);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* — Minimalistic Message Content ---------------------------------------- */
+.message-content {
+  font-size: 14px;
+  line-height: 1.625;
+}
+
+.message-content h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.75rem;
+  color: var(--color-primary);
+}
+
+.message-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem;
+  color: var(--color-primary);
+}
+
+.message-content p {
+  margin: 0.75rem 0;
+}
+
+.message-content strong {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.message-content code {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.875em;
+  background: var(--color-surface);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+
+.message-content pre {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.message-content pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* — Lists & Tables ------------------------------------------------------ */
+.message-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.message-content ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.message-content li {
+  margin: 0.25rem 0;
+  line-height: 1.625;
+}
+
+.message-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+}
+
+.message-content th {
+  text-align: left;
+  padding: 0.75rem;
+  background: var(--color-surface);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.message-content td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.message-content tbody tr:hover {
+  background: var(--color-surface);
+}
+
+/* — Financial Report Minimal Styling ------------------------------------ */
+.financial-report {
+  font-size: 14px;
+  line-height: 1.625;
+}
+
+.financial-report strong {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.financial-report h2,
+.financial-report h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* — Utility Classes ----------------------------------------------------- */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
