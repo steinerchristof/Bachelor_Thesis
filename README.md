@@ -39,13 +39,13 @@ A requirements.txt file is provided which contains all the needed libraries for 
 ## Usage
 
 ### Backend API (backend/api/app.py)
-To run the backend API you will need an **API key** for the LLM service (OpenAI).
+To run the backend API you will need an **API key** for the LLM service (AzureOpenAI).
 
 ### Document Processing (backend/data_preparation/ocr_chunking.py)
 The document processing module handles the chunking of financial documents. To execute the processing, documents must be placed in the designated input directory and the chunking parameters can be adjusted accordingly.
 
 ### Embedding Service (backend/data_storage/embedding/embedder.py)
-To run the embedding service you will need to have the **API key** for the embedding service (OpenAI).
+To run the embedding service you will need to have the **API key** for the embedding service (AzureOpenAI).
 
 You can customize the behavior of the embedding by adjusting the parameters in the `generate_embeddings` function:
 
