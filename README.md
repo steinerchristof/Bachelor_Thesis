@@ -73,4 +73,4 @@ You can customize the search behavior by adjusting the parameters in the `hybrid
   Enabling this improves relevance but increases latency.
 
 ### Frontend (frontend/)
-The frontend requires Node.js and npm to be installed. Configuration is done through environment variables in the .env.local file.
+The frontend requires Node.js and npm to be installed.
