@@ -3,7 +3,7 @@ Repository of my Bachelor Thesis at UZH in the Spring Semester of 2025
 
 ## Abstract
 Swiss fiduciary firms process thousands of multilingual financial documents daily while complying with strict data protection regulations including revDSG. 
-Current keyword-based systems cannot understand semantic relationships, forcing professionals to spend excessive time searching for information. Existing AI solutions fail to maintain the data isolation required between client mandates in multi-tenant environments.
+Current keyword-based systems cannot understand semantic relationships, forcing professionals to spend excessive time searching for information. Existing artificial intelligence (AI) solutions fail to maintain the data isolation required between client mandates in multi-tenant environments.
 Using Design Science Research Methodology (DSRM), we developed a Retrieval-Augmented Generation (RAG) system for Dorean AG combining BM25 lexical search, vector embeddings, and reranking. The system uses GPT-4o on Swiss-only Azure infrastructure with metadata-based tenant isolation.
 Testing with 60 fiduciary queries achieved 95\% accuracy and 20-second response times versus hours manually. Two external fiduciary firms validated the system's value for automated financial analysis, though noting limitations in document scope and need for user training. Both confirmed readiness for production deployment.
 
